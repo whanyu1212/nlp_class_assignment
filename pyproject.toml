@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "nlp-class-assignment"
+version = "0.1.0"
+description = "nlp assignment"
+authors = ["hy"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.1"
+numpy = "^1.26.4"
+nltk = "^3.8.1"
+spacy = "^3.7.4"
+black = "^24.3.0"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+docformatter = "^1.7.5"
+tensorflow = "^2.16.1"
+keras = "^3.1.1"
+ipywidgets = "^8.1.2"
+transformers = "^4.39.0"
+pyspellchecker = "^0.8.1"
+fuzzywuzzy = "^0.18.0"
+loguru = "^0.7.2"
+tqdm = "^4.66.2"
+python-levenshtein = "^0.25.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
