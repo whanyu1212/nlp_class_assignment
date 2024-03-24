@@ -24,6 +24,11 @@ fuzzywuzzy = "^0.18.0"
 loguru = "^0.7.2"
 tqdm = "^4.66.2"
 python-levenshtein = "^0.25.0"
+openpyxl = "^3.1.2"
+scikit-learn = "^1.4.1.post1"
+lightgbm = "^4.3.0"
+optuna = "^3.6.0"
+mlflow = "^2.11.3"
 
 
 [tool.poetry.group.dev.dependencies]
