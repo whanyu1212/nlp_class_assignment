@@ -1,5 +1,8 @@
 import pandas as pd
 import spacy
+from tqdm import tqdm
+
+tqdm.pandas()
 
 
 class TextPreProcessing:
@@ -92,5 +95,12 @@ class TextPreProcessing:
         df = self.lower_case(df)
         df = self.remove_special_characters(df)
         df = self.strip_extra_spaces(df)
-        df["processed_arguments"] = df[self.column].apply(self.apply_spacy_pipeline)
+        # its easier to use list for dictionary approach
+        df[f"Processed_{self.column}_list"] = df[self.column].progress_apply(
+            self.apply_spacy_pipeline
+        )
+        # its easier to use string for count vectorizer and tfidf
+        df[f"Processed_{self.column}_str"] = df[f"Processed_{self.column}_list"].apply(
+            " ".join
+        )
         return df
